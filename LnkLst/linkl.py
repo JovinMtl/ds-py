@@ -15,7 +15,7 @@ class LinkedList:
         self.last = None
         self.size = 0
     
-    def _addEl(self, *elements:Node)->int:
+    def addEl(self, *elements:Node)->int:
         """This method adds the element at the last index."""
         for element in elements:
             newEL = Node(element)
@@ -42,6 +42,18 @@ class LinkedList:
         else:
             return "Empty"
     
+    def delEl(self, element:Node)->int:
+        """THis method will delete the element from the first 
+        occurence."""
+        if self.first and self.first.data == element and \
+            self.first.next:
+            self.first = self.first.next
+        current = self.first
+        previous = current
+        while current:
+            if current.data == element and current.next:
+                previous.next = current.next
+
     def __len__(self)->int:
         """This method returns the size of the LinkedList."""
         return self.size
@@ -49,9 +61,9 @@ class LinkedList:
 
 # initializing the LinkedList
 lklst = LinkedList()
-lklst._addEl(4) #adding the element
-lklst._addEl(7, 10)
-lklst._addEl(3, 'jove')
-lklst._addEl(0, 3, 8)
+lklst.addEl(4) #adding the element
+lklst.addEl(7, 10)
+lklst.addEl(3, 'jove')
+lklst.addEl(0, 3, 8)
 print(f"Now we want to print the content: {lklst} \
        and its size is {len(lklst)}")
