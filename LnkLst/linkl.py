@@ -43,4 +43,5 @@ class LinkedList:
 
 # initializing the LinkedList
 lklst = LinkedList()
+lklst._addEl(4) #adding the element
 print(f"Now we want to print the content: {lklst}")
