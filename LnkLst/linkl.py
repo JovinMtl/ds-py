@@ -42,8 +42,9 @@ class LinkedList:
         else:
             return "Empty"
     
-    def get_size(self)->int:
+    def __len__(self)->int:
         """This method returns the size of the LinkedList."""
+        return self.size
 
 
 # initializing the LinkedList
@@ -52,4 +53,5 @@ lklst._addEl(4) #adding the element
 lklst._addEl(7, 10)
 lklst._addEl(3, 'jove')
 lklst._addEl(0, 3, 8)
-print(f"Now we want to print the content: {lklst}")
+print(f"Now we want to print the content: {lklst} \
+       and its size is {len(lklst)}")
