@@ -35,10 +35,11 @@ class LinkedList:
         current = self.first
         while current:
             content.append(current.data)
+            print(f"I can see something like {current.data}")
             current = current.next
 
         if len(content):
-            return "Okay"
+            return str(content)
         else:
             return "Empty"
 
