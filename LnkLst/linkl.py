@@ -28,10 +28,6 @@ class LinkedList:
 
         return 0 # went well
     
-    def print(self)->str:
-        """THis will print the content"""
-        return "Hello world"
-    
     def __str__(self) -> str:
         """This method will print the content of the LinkedList."""
         content = []
@@ -51,6 +47,6 @@ class LinkedList:
 lklst = LinkedList()
 lklst._addEl(4) #adding the element
 lklst._addEl(7, 10)
-lklst._addEl(3)
+lklst._addEl(3, 'jove')
 lklst._addEl(0, 3, 8)
 print(f"Now we want to print the content: {lklst}")
