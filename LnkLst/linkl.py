@@ -54,6 +54,8 @@ class LinkedList:
             if current.data == element and current.next:
                 previous.next = current.next
                 self.size -= 1
+            else:
+                previous = current
             current = current.next
 
     def __len__(self)->int:
@@ -72,4 +74,5 @@ print(f"Now we want to print the content: {lklst} \
 
 # Now to delete one element
 lklst.delEl(3)
+lklst.delEl(8)
 print(f"The rest is { lklst} and size of {len(lklst)}")
