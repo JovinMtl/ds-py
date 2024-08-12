@@ -42,8 +42,8 @@ class LinkedList:
             return "Empty"
     
     def delEl(self, element:Node)->int:
-        """THis method will delete the element from the first 
-        occurence."""
+        """THis method will delete all occurence of the element 
+        in the linkedList."""
         if self.first and self.first.data == element and \
             self.first.next:
             self.first = self.first.next
@@ -78,6 +78,6 @@ print(f"Now we want to print the content: {lklst} \
        and its size is {len(lklst)}")
 
 # Now to delete one element
-lklst.delEl(3)
-lklst.delEl(4)
+lklst.delEl(0)
+# lklst.delEl(4)
 print(f"The rest is { lklst} and size of {len(lklst)}")
