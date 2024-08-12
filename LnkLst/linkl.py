@@ -4,6 +4,9 @@ class Node:
     def __init__(self, data) -> None:
         self.data = data  #anything
         self.next = None # will hold that next object(node)
+    
+    def __str__(self) -> str:
+        return self.data
 
 class LinkedList:
     """This class is for linkedList."""
