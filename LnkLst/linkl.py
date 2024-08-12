@@ -20,11 +20,8 @@ class LinkedList:
         newEL = Node(element)
         if not self.first:
             self.first = newEL
-            self.last = newEL
-            size = 1
-        else:
-            self.last = newEL
-            size += 1
+        self.last = newEL
+        self.size += 1
 
         return 0 # went well
     
@@ -50,4 +47,5 @@ class LinkedList:
 # initializing the LinkedList
 lklst = LinkedList()
 lklst._addEl(4) #adding the element
+lklst._addEl(7)
 print(f"Now we want to print the content: {lklst}")
