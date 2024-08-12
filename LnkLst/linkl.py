@@ -16,7 +16,7 @@ class LinkedList:
         self.size = 0
     
     def addelements(self, *elements:Node)->int:
-        """This method adds the element at the last index."""
+        """This method adds the element(s) at the last index."""
         for element in elements:
             newEL = Node(element)
             if not self.first:
@@ -64,7 +64,7 @@ class LinkedList:
             current = current.next
         
     def delOneEl(self, *elements:Node)->int:
-        """THis method will delete all occurence of the element 
+        """THis method will delete one occurence of the element 
         in the linkedList."""
 
         for element in elements:
