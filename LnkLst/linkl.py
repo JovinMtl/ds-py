@@ -8,9 +8,9 @@ class Node:
 class LinkedList:
     """This class is for linkedList."""
     def __init__(self) -> None:
-        first = None  # will hold first object
-        last = None
-        size = 0
+        self.first = None  # will hold first object
+        self.last = None
+        self.size = 0
     
     def _addEl(self, element:Node)->int:
         """This method adds the element at the last index."""
@@ -24,19 +24,23 @@ class LinkedList:
 
         return 0 # went well
     
+    def print(self)->str:
+        """THis will print the content"""
+        return "Hello world"
+    
     def __str__(self) -> str:
         """This method will print the content of the LinkedList."""
         content = []
         current = self.first
-        while not current.data
+        while current:
             content.append(current.data)
 
         if len(content):
-            return content
+            return "Okay"
         else:
             return "Empty"
 
 
 # initializing the LinkedList
 lklst = LinkedList()
-print(f"Now we want to print the content: {list}")
+print(f"Now we want to print the content: {lklst}")
