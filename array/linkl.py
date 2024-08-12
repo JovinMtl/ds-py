@@ -17,7 +17,9 @@ class LinkedList:
         if not self.first:
             self.first = newEL
             self.last = newEL
-            size +=1
+            size += 1
+        else:
+            self.last =newEL
 
         return 0 # went well
 
