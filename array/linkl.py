@@ -24,6 +24,17 @@ class LinkedList:
 
         return 0 # went well
     
+    def __str__(self) -> str:
+        """This method will print the content of the LinkedList."""
+        content = []
+        current = self.first
+        while not current.data
+            content.append(current.data)
+
+        if len(content):
+            return content
+        else:
+            return "Empty"
 
 
 # initializing the LinkedList
