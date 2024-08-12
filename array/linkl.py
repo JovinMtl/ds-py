@@ -39,3 +39,4 @@ class LinkedList:
 
 # initializing the LinkedList
 lklst = LinkedList()
+print(f"Now we want to print the content: {list}")
