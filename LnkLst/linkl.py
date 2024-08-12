@@ -42,7 +42,7 @@ class LinkedList:
             return "Empty"
     
     def delEl(self, element:Node)->int:
-        """THis method will delete all occurence of the element 
+        """THis method will delete all occurence of one element 
         in the linkedList."""
         if self.first and self.first.data == element and \
             self.first.next:
@@ -91,7 +91,7 @@ class LinkedList:
                 current = current.next
         
     def delements(self, *elements:Node)->int:
-        """THis method will delete all occurence of the element 
+        """THis method will delete all occurence of the elements 
         in the linkedList."""
 
         for element in elements:
