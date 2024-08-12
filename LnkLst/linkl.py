@@ -15,7 +15,7 @@ class LinkedList:
         self.last = None
         self.size = 0
     
-    def _addEl(self, element:Node)->int:
+    def _addEl(self, *element:Node)->int:
         """This method adds the element at the last index."""
         newEL = Node(element)
         if not self.first:
@@ -51,4 +51,5 @@ lklst = LinkedList()
 lklst._addEl(4) #adding the element
 lklst._addEl(7)
 lklst._addEl(3)
+lklst._addEl(0, 3)
 print(f"Now we want to print the content: {lklst}")
