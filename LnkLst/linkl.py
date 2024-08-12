@@ -20,7 +20,9 @@ class LinkedList:
         newEL = Node(element)
         if not self.first:
             self.first = newEL
-        self.last = newEL
+            self.last = newEL
+        else:
+            self.last.next = newEL
         self.size += 1
 
         return 0 # went well
