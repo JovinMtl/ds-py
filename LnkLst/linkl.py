@@ -53,6 +53,7 @@ class LinkedList:
         while current:
             if current.data == element and current.next:
                 previous.next = current.next
+                self.size -= 1
 
     def __len__(self)->int:
         """This method returns the size of the LinkedList."""
