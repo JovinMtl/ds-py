@@ -13,6 +13,7 @@ class LinkedList:
         size = 0
     
     def _addEl(self, element:Node)->int:
+        """This method adds the element at the last index."""
         newEL = Node(1)
         if not self.first:
             self.first = newEL
@@ -22,6 +23,7 @@ class LinkedList:
             self.last =newEL
 
         return 0 # went well
+    
 
 
 # initializing the LinkedList
