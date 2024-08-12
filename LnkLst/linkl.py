@@ -35,6 +35,7 @@ class LinkedList:
         current = self.first
         while current:
             content.append(current.data)
+            current = current.next
 
         if len(content):
             return "Okay"
