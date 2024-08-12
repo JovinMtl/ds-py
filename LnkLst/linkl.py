@@ -72,4 +72,4 @@ print(f"Now we want to print the content: {lklst} \
 
 # Now to delete one element
 lklst.delEl(3)
-print(f"The rest is { lklst}")
+print(f"The rest is { lklst} and size of {len(lklst)}")
