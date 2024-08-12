@@ -67,3 +67,7 @@ lklst.addEl(3, 'jove')
 lklst.addEl(0, 3, 8)
 print(f"Now we want to print the content: {lklst} \
        and its size is {len(lklst)}")
+
+# Now to delete one element
+lklst.delEl(3)
+print(f"The rest is { lklst}")
