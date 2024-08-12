@@ -15,15 +15,16 @@ class LinkedList:
         self.last = None
         self.size = 0
     
-    def _addEl(self, *element:Node)->int:
+    def _addEl(self, *elements:Node)->int:
         """This method adds the element at the last index."""
-        newEL = Node(element)
-        if not self.first:
-            self.first = newEL
-        else:
-            self.last.next = newEL
-        self.last = newEL
-        self.size += 1
+        for element in elements:
+            newEL = Node(element)
+            if not self.first:
+                self.first = newEL
+            else:
+                self.last.next = newEL
+            self.last = newEL
+            self.size += 1
 
         return 0 # went well
     
@@ -49,7 +50,7 @@ class LinkedList:
 # initializing the LinkedList
 lklst = LinkedList()
 lklst._addEl(4) #adding the element
-lklst._addEl(7)
+lklst._addEl(7, 10)
 lklst._addEl(3)
-lklst._addEl(0, 3)
+lklst._addEl(0, 3, 8)
 print(f"Now we want to print the content: {lklst}")
