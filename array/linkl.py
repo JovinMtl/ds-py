@@ -13,7 +13,12 @@ class LinkedList:
         size = 0
     
     def _addEl(self, element):
-        newEL = Node()
+        newEL = Node(1)
+        if not self.first:
+            self.first = newEL
+            self.last = newEL
+
+        return 0 # went well
 
 
 # initializing the LinkedList
