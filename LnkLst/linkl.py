@@ -41,6 +41,9 @@ class LinkedList:
             return str(content)
         else:
             return "Empty"
+    
+    def get_size(self)->int:
+        """This method returns the size of the LinkedList."""
 
 
 # initializing the LinkedList
