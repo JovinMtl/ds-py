@@ -63,30 +63,30 @@ class LinkedList:
                 previous = current
             current = current.next
         
-        def delOneEl(self, element:Node)->int:
-            """THis method will delete all occurence of the element 
-            in the linkedList."""
-            if self.first and self.first.data == element and \
-                self.first.next:
-                self.first = self.first.next
+    def delOneEl(self, element:Node)->int:
+        """THis method will delete all occurence of the element 
+        in the linkedList."""
+        if self.first and self.first.data == element and \
+            self.first.next:
+            self.first = self.first.next
+            self.size -= 1
+            return 0
+        current = self.first
+        previous = current
+        while current:
+            if current.data == element and current.next:
+                previous.next = current.next
                 self.size -= 1
                 return 0
-            current = self.first
-            previous = current
-            while current:
-                if current.data == element and current.next:
-                    previous.next = current.next
-                    self.size -= 1
-                    return 0
-                elif current.data == element:
-                    # print("It is the last")
-                    self.last = previous
-                    previous.next = None
-                    self.size -= 1
-                    return 0
-                else:
-                    previous = current
-                current = current.next
+            elif current.data == element:
+                # print("It is the last")
+                self.last = previous
+                previous.next = None
+                self.size -= 1
+                return 0
+            else:
+                previous = current
+            current = current.next
 
     def __len__(self)->int:
         """This method returns the size of the LinkedList."""
@@ -103,6 +103,7 @@ print(f"Now we want to print the content: {lklst} \
        and its size is {len(lklst)}")
 
 # Now to delete one element
-lklst.delEl(0)
+# lklst.delEl(0)
 # lklst.delEl(4)
+lklst.delOneEl(3)
 print(f"The rest is { lklst} and size of {len(lklst)}")
