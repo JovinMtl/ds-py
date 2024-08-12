@@ -99,20 +99,17 @@ class LinkedList:
                 self.first.next:
                 self.first = self.first.next
                 self.size -= 1
-                continue
             current = self.first
             previous = current
             while current:
                 if current.data == element and current.next:
                     previous.next = current.next
                     self.size -= 1
-                    continue
                 elif current.data == element:
                     # print("It is the last")
                     self.last = previous
                     previous.next = None
                     self.size -= 1
-                    continue
                 else:
                     previous = current
                 current = current.next
@@ -135,5 +132,6 @@ print(f"Now we want to print the content: {lklst} \
 # Now to delete one element
 # lklst.delEl(0)
 # lklst.delEl(4)
-lklst.delOneEl(8, 0)
+# lklst.delOneEl(8, 0)
+lklst.delOneElx(3, 0, 7, 10)
 print(f"The rest is { lklst} and size of {len(lklst)}")
