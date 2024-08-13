@@ -114,6 +114,25 @@ class LinkedList:
                 else:
                     previous = current
                 current = current.next
+    
+    def reverse(self):
+        """This method will reverse the linkedList"""
+        tempOne = None
+        tempEnd = self.first
+        current = self.last
+        i = 0
+        worthy = True
+        while worthy:
+            if not current.previous:
+                worthy = False
+                continue
+            tempOne = current.next
+            current.next = current.previous
+            if not i :
+                current.previous = None
+            else:
+                current.previous = tempOne
+            current = current.next
 
 
     def __len__(self)->int:

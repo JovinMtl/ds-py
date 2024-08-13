@@ -1,0 +1,10 @@
+
+
+[1, 2, 3]
+
+next = previous
+if 0:
+    previous = None
+else:
+    previous = next
+current = next
