@@ -7,7 +7,7 @@ class Node:
         self.previous = None
     
     def __str__(self) -> str:
-        return self.data
+        return f"{self.data}"
 
 class LinkedList:
     """This class is for linkedList."""
@@ -123,13 +123,16 @@ class LinkedList:
         i = 0
         worthy = True
         while worthy:
+            print(f"turn: {i}")
             if not current.previous:
+                print(f"The current: {current}")
                 worthy = False
                 continue
             tempOne = current.next
             current.next = current.previous
             if not i :
                 current.previous = None
+                i += 1
             else:
                 current.previous = tempOne
             current = current.next
@@ -153,5 +156,6 @@ print(f"Now we want to print the content: {lklst} \
 # lklst.delEl(0)
 # lklst.delEl(4)
 # lklst.delOneEl(8, 0)
-lklst.delements(3, 0, 7, 10)
+# lklst.delements(3, 0, 7, 10)
+lklst.reverse()
 print(f"The rest is { lklst} and size of {len(lklst)}")
