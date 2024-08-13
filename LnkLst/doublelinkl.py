@@ -124,13 +124,11 @@ class LinkedList:
         i = 0
         worthy = True
         while worthy:
-            print(f"turn: {i}")
             if not current.previous:
-                print(f"The current: {current.previous}, should break")
                 worthy = False
                 self.last = current
                 current.next = None
-                return 1
+                continue
             tempOne = current.next
             current.next = current.previous
             if not i :
@@ -141,7 +139,7 @@ class LinkedList:
                 current.previous = tempOne
                 i += 1
             current = current.next
-        print(f"Loop ended with : {i}")
+
         return 0
 
 
