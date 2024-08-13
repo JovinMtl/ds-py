@@ -118,6 +118,8 @@ class LinkedList:
     
     def reverse(self)->int:
         """This method will reverse the linkedList"""
+        if self.size < 2:
+            return -1
         tempOne = None
         tempEnd = self.first
         current = self.last
@@ -163,4 +165,6 @@ print(f"Now we want to print the content: {lklst} \
 # lklst.delOneEl(8, 0)
 # lklst.delements(3, 0, 7, 10)
 lklst.reverse()
+print(f"The rest is { lklst} and size of {len(lklst)}")
+lklst.delements(8, 0)
 print(f"The rest is { lklst} and size of {len(lklst)}")
