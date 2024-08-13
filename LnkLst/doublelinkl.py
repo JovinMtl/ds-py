@@ -143,6 +143,9 @@ class LinkedList:
             current = current.next
 
         return 0
+    
+    def getKthfromEnd(k:int):
+        """This method will return the Node from the last n index."""
 
 
     def __len__(self)->int:
