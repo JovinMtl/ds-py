@@ -19,3 +19,11 @@ class Stack:
         self.latest = self.previous
         self.previous = self.previous.previous
     
+    def __str__(self) -> str:
+        content = []
+        current = self.latest
+        while current:
+            content.append(current.data)
+            self.getBack
+        
+        return f"{current}"
