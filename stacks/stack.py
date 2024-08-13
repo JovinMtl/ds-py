@@ -10,3 +10,9 @@ class Stack:
 
         return None
     
+    def addState(self, node:Node)->int:
+        self.previous = self.latest
+        self.latest = node
+        return 0
+    
+    
