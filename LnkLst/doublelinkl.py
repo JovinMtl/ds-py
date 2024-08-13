@@ -23,6 +23,7 @@ class LinkedList:
             if not self.first:
                 self.first = newEL
             else:
+                newEL.previous = self.last
                 self.last.next = newEL
             self.last = newEL
             self.size += 1
