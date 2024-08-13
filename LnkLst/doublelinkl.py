@@ -128,11 +128,13 @@ class LinkedList:
             if not current.previous:
                 print(f"The current: {current.previous}, should break")
                 worthy = False
-                self.first = current
+                self.last = current
+                current.next = None
                 return 1
             tempOne = current.next
             current.next = current.previous
             if not i :
+                self.first = current
                 current.previous = None
                 i += 1
             else:
@@ -163,4 +165,4 @@ print(f"Now we want to print the content: {lklst} \
 # lklst.delOneEl(8, 0)
 # lklst.delements(3, 0, 7, 10)
 lklst.reverse()
-# print(f"The rest is { lklst} and size of {len(lklst)}")
+print(f"The rest is { lklst} and size of {len(lklst)}")
