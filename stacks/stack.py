@@ -15,4 +15,7 @@ class Stack:
         self.latest = node
         return 0
     
+    def getBack(self):
+        self.latest = self.previous
+        self.previous = self.previous.previous
     
