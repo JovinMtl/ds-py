@@ -155,11 +155,11 @@ class LinkedList:
             if i == k:
                 worth = False
                 pTwo = current
-                continue
+                return pTwo
             current = current.previous
             i += 1
         
-        return pTwo
+        # return pTwo
 
 
     def __len__(self)->int:
@@ -178,10 +178,11 @@ print(f"Now we want to print the content: {lklst} \
 
 # Now to delete one element
 # lklst.delEl(0)
-# lklst.delEl(4)
+# lklst.delEl(8)
 # lklst.delOneEl(8, 0)
 # lklst.delements(3, 0, 7, 10)
-lklst.reverse()
+# lklst.reverse()
+# print(f"The rest is { lklst} and size of {len(lklst)}")
+# lklst.delements(8, 0)
 print(f"The rest is { lklst} and size of {len(lklst)}")
-lklst.delements(8, 0)
-print(f"The rest is { lklst} and size of {len(lklst)}")
+print(f"The Get element: {lklst.getKthfromEnd(1)}")
