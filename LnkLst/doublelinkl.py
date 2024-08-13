@@ -116,7 +116,7 @@ class LinkedList:
                     previous = current
                 current = current.next
     
-    def reverse(self):
+    def reverse(self)->int:
         """This method will reverse the linkedList"""
         tempOne = None
         tempEnd = self.first
@@ -126,9 +126,10 @@ class LinkedList:
         while worthy:
             print(f"turn: {i}")
             if not current.previous:
-                print(f"The current: {current}")
+                print(f"The current: {current.previous}, should break")
                 worthy = False
-                continue
+                self.first = current
+                return 1
             tempOne = current.next
             current.next = current.previous
             if not i :
@@ -136,7 +137,10 @@ class LinkedList:
                 i += 1
             else:
                 current.previous = tempOne
+                i += 1
             current = current.next
+        print(f"Loop ended with : {i}")
+        return 0
 
 
     def __len__(self)->int:
@@ -159,4 +163,4 @@ print(f"Now we want to print the content: {lklst} \
 # lklst.delOneEl(8, 0)
 # lklst.delements(3, 0, 7, 10)
 lklst.reverse()
-print(f"The rest is { lklst} and size of {len(lklst)}")
+# print(f"The rest is { lklst} and size of {len(lklst)}")
