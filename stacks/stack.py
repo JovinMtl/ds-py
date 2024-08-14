@@ -95,3 +95,7 @@ def reverse(data):
     print(f"{data} became {result}")
 
 reverse(data="123 456")
+
+
+def syntax_check(data):
+    """This function will check the syntax that is correct(balanced)."""
