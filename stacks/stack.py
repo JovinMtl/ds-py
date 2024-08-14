@@ -1,16 +1,28 @@
 
 
-from ..LnkLst import Node
+# import sys
+
+# sys.path.append('../LnkLst')
+
+# from doublelinkl import Node
+# # from ..LnkLst.doublelinkl import Node
+
+class State:
+    """This will represent any state in the stack."""
+    def __init__(self, data) -> None:
+        self.data = data
+        self.previous = None
 
 class Stack:
     """This class is for implementing the stack behaviour."""
     def __init__(self) -> None:
-        self.latest = None // the latest state of the Stack
-        self.previous = None // the previous Node of the stack.
+        self.latest = None # the latest state of the Stack
+        self.previous = None # the previous Node of the stack.
 
         return None
     
-    def addState(self, node:Node)->int:
+    def addState(self, element)->int:
+        node = State(element)
         self.previous = self.latest
         self.latest = node
         return 0
@@ -23,7 +35,14 @@ class Stack:
         content = []
         current = self.latest
         while current:
+            print(f"we can see : {current.data}")
             content.append(current.data)
-            self.getBack
+            current = current.previous
         
-        return f"{current}"
+        return f"{content}"
+    
+
+# Now consumming the objects
+stack_instance = Stack()
+stack_instance.addState(2)
+print(f"we have : {stack_instance}")
