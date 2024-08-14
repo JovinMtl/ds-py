@@ -34,6 +34,13 @@ class Stack:
             self.latest = self.latest.previous
         return 0
     
+    def peek(self):
+        """This method returns the top item of the stack without 
+        removing it."""
+        if self.latest:
+            return self.latest.data
+        return 0
+    
     def getBack(self):
         self.latest = self.previous
         self.previous = self.previous.previous
