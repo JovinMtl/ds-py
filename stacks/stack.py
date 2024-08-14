@@ -21,7 +21,7 @@ class Stack:
 
         return None
     
-    def addState(self, element)->int:
+    def push(self, element)->int:
         node = State(element)
         if self.latest:
             node.previous = self.latest
@@ -44,7 +44,7 @@ class Stack:
 
 # Now consumming the objects
 stack_instance = Stack()
-stack_instance.addState(2)
-stack_instance.addState(5)
-stack_instance.addState(3)
+stack_instance.push(2)
+stack_instance.push(5)
+stack_instance.push(3)
 print(f"we have : {stack_instance}")
