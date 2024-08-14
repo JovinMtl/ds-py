@@ -23,7 +23,8 @@ class Stack:
     
     def addState(self, element)->int:
         node = State(element)
-        self.previous = self.latest
+        if self.latest:
+            node.previous = self.latest
         self.latest = node
         return 0
     
@@ -35,7 +36,6 @@ class Stack:
         content = []
         current = self.latest
         while current:
-            print(f"we can see : {current.data}")
             content.append(current.data)
             current = current.previous
         
@@ -45,4 +45,6 @@ class Stack:
 # Now consumming the objects
 stack_instance = Stack()
 stack_instance.addState(2)
+stack_instance.addState(5)
+stack_instance.addState(3)
 print(f"we have : {stack_instance}")
