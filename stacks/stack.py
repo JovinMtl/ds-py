@@ -41,6 +41,13 @@ class Stack:
             return self.latest.data
         return 0
     
+    def isEmpty(self)->bool:
+        """This method tells whether the stack is empty or not."""
+        if self.latest:
+            return True
+        else:
+            return False
+    
     def getBack(self):
         self.latest = self.previous
         self.previous = self.previous.previous
@@ -64,4 +71,5 @@ print(f"we have : {stack_instance}")
 
 stack_instance.pop()
 print(f"The rest is : {stack_instance}")
+print(f"We peek the last element: {stack_instance.peek()}")
 
