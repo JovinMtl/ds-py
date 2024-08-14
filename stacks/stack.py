@@ -74,22 +74,24 @@ print(f"The rest is : {stack_instance}")
 print(f"We peek the last element: {stack_instance.peek()}")
 print(f"Does the stack empty? {stack_instance.isEmpty()}")
 
+
 # Now reversing a string "abcde"
-jove_stack = Stack()
-data = "abcde"
+def reverse(data):
+    jove_stack = Stack()
+    # data = "123 456"
 
-i = 0
-while i < len(data):
-    jove_stack.push(data[i])
-    i += 1
+    i = 0
+    while i < len(data):
+        jove_stack.push(data[i])
+        i += 1
 
-i = 0
-result = ''
-print(f"First: {jove_stack} from {data}")
-while i < len(data):
-    result += jove_stack.pop()
-    i += 1
+    i = 0
+    result = ''
+    print(f"First: {jove_stack} from {data}")
+    while i < len(data):
+        result += jove_stack.pop()
+        i += 1
 
-print(f"{data} became {result}")
+    print(f"{data} became {result}")
 
-
+reverse(data="123 456")
