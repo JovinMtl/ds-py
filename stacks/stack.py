@@ -30,9 +30,11 @@ class Stack:
     
     def pop(self)->int:
         """This method remove the item on the top of the stack."""
+        elem = None
         if self.latest:
+            elem = self.latest
             self.latest = self.latest.previous
-        return 0
+        return elem
     
     def peek(self):
         """This method returns the top item of the stack without 
@@ -71,4 +73,21 @@ stack_instance.pop()
 print(f"The rest is : {stack_instance}")
 print(f"We peek the last element: {stack_instance.peek()}")
 print(f"Does the stack empty? {stack_instance.isEmpty()}")
+
+# Now reversing a string "abcde"
+jove_stack = Stack()
+data = "a b c d e"
+data_list = data.split()
+
+for elem in data_list:
+    jove_stack.push(elem)
+i = 0
+result = ''
+print(f"First: {jove_stack} from {data_list}")
+while i < len(data_list):
+    result += jove_stack.pop()
+    i += 1
+
+print(f"{data} became {result}")
+
 
