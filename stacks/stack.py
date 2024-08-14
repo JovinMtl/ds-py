@@ -53,3 +53,7 @@ stack_instance.push(2)
 stack_instance.push(5)
 stack_instance.push(3)
 print(f"we have : {stack_instance}")
+
+stack_instance.pop()
+print(f"The rest is : {stack_instance}")
+
