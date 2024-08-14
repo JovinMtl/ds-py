@@ -34,7 +34,7 @@ class Stack:
         if self.latest:
             elem = self.latest
             self.latest = self.latest.previous
-        return elem
+        return elem.data
     
     def peek(self):
         """This method returns the top item of the stack without 
@@ -76,15 +76,17 @@ print(f"Does the stack empty? {stack_instance.isEmpty()}")
 
 # Now reversing a string "abcde"
 jove_stack = Stack()
-data = "a b c d e"
-data_list = data.split()
+data = "abcde"
 
-for elem in data_list:
-    jove_stack.push(elem)
+i = 0
+while i < len(data):
+    jove_stack.push(data[i])
+    i += 1
+
 i = 0
 result = ''
-print(f"First: {jove_stack} from {data_list}")
-while i < len(data_list):
+print(f"First: {jove_stack} from {data}")
+while i < len(data):
     result += jove_stack.pop()
     i += 1
 
