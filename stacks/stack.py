@@ -48,10 +48,6 @@ class Stack:
         else:
             return False
     
-    def getBack(self):
-        self.latest = self.previous
-        self.previous = self.previous.previous
-    
     def __str__(self) -> str:
         content = []
         current = self.latest
@@ -69,6 +65,8 @@ stack_instance.push(5)
 stack_instance.push(3)
 print(f"we have : {stack_instance}")
 
+stack_instance.pop()
+stack_instance.pop()
 stack_instance.pop()
 print(f"The rest is : {stack_instance}")
 print(f"We peek the last element: {stack_instance.peek()}")
