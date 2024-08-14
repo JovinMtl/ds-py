@@ -28,6 +28,9 @@ class Stack:
         self.latest = node
         return 0
     
+    def pop(self):
+        """This method remove the item on the top of the stack."""
+    
     def getBack(self):
         self.latest = self.previous
         self.previous = self.previous.previous
