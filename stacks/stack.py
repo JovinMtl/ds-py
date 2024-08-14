@@ -30,6 +30,8 @@ class Stack:
     
     def pop(self):
         """This method remove the item on the top of the stack."""
+        if self.latest:
+            self.latest = self.latest.previous
     
     def getBack(self):
         self.latest = self.previous
