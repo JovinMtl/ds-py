@@ -107,5 +107,5 @@ def syntax_check(data):
     else:
         return False
 
-print(f"Does ( opening? {syntax_check("(")}")
+print(f"Does ( opening? {syntax_check("Jo")}")
 
