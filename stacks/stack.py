@@ -100,12 +100,12 @@ reverse(data="123 456")
 def syntax_check(data):
     """This function will check the syntax that is correct(balanced)."""
 
-    opening = "\"'([{"
+    opening = "\'\([{"
     
     if data in opening:
         return True
     else:
         return False
 
-print(f"Does ( opening? {syntax_check("Jo")}")
+print(f"Does ( opening? {syntax_check('(')}")
 
