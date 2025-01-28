@@ -10,11 +10,11 @@ class ProbOne:
         if self.data == self._re(self.data):
             return self.data
         while i < (l_d-1):
-            m1 = self.data[i:]
+            m1 = self.data[i:] # taking the first caracter to match the rest
             if self._re(m1) == m1:
                 return m1
             j = 1
-            while j <= (l_d-1):
+            while j <= (l_d-1): # the rest to match with, or m1 to be the next
                 m2 = self.data[:-j]
                 m3 = self.data[i:-j]
                 if self._re(m2) == m2 and \
