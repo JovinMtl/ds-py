@@ -28,6 +28,7 @@ class ProbOne:
         return self.data[0]
     
     def _re(self, data):
+        # This method is for reversing the string
         l_d = len(data) - 1
         i = 0
         result = ''
