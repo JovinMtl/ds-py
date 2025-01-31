@@ -3,6 +3,13 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
+        if not (len(nums1) == m + n):
+            a = len(nums1)
+            print(f"num1 had: {len(nums1)}")
+            while a < m + n:
+                nums1.append(nums1[a-1]*10)
+                a += 1
+            print(f"num1 got: {len(nums1)}")
         cond1 = len(nums1) == m + n
         cond2 = len(nums2) == n
         cond3 = 0 <= m and n <= 200
@@ -10,6 +17,7 @@ class Solution:
         cond5 = (-109 <= nums1[m-1]) and (nums2[n-1] <= 109)
         worth = False
         once = True
+        
 
         if cond1 and cond2 and cond3 and \
             cond4 and cond5:
@@ -21,24 +29,20 @@ class Solution:
             arr = []
             i1, i2 = 0, 0
             while (i < max):
-                print((i2 < (n)))
-                if nums1[i1] < nums2[i2]:
+                if nums1[i1] < nums2[i2] or nums2[i2] == False:
                     arr.append(nums1[i1])
                     i1 += 1
                 else:
-                    print(f"i2: {i2} = {nums2[i2]}")
                     arr.append(nums2[i2])
                     i2 += 1
                 if (i2 >= n) and once:
-                    print(f"ONLY HERE")
-                    nums2.append(self._makePos(nums1[i1]+1))
-                    # once = False
+                    nums2.append(False)
                 i += 1
             nums1 = arr
         else:
             print(f"Not worthy:{cond1}{cond2}{cond3}{cond4}{cond5}")
         
-        print(f"The nums1 ends with {nums1}")
+        return nums1
     
     def _makePos(self, num)->int:
         if num < 0:
