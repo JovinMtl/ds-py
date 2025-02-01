@@ -14,7 +14,14 @@ class Solution:
         cond2 = len(nums2) == n
         cond3 = 0 <= m and n <= 200
         cond4 = 1 <= m + n <= 200
-        cond5 = (-109 <= nums1[m-1]) and (nums2[n-1] <= 109)
+        cond5 = True
+        if not n and len(nums2):
+            cond2 = True
+            cond5 = (-109 <= nums1[m-1]) and (nums2[n-1] <= 109)
+        if (len(nums2)== 0):
+            cond2 = True
+            cond5 = False
+            print(f"but: N is {len(nums2)}")
         worth = False
         once = True
         
@@ -23,7 +30,7 @@ class Solution:
             cond4 and cond5:
             worth = True
         
-        if worth:
+        if worth and n:
             max = m + n
             i = 0
             arr = []
@@ -39,6 +46,8 @@ class Solution:
                     nums2.append(False)
                 i += 1
             nums1 = arr
+        elif not cond5:
+            print(f"Empty nums2")
         else:
             print(f"Not worthy:{cond1}{cond2}{cond3}{cond4}{cond5}")
         
