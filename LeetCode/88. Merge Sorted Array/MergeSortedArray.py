@@ -3,12 +3,11 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        has_left = True
+        has_left = True # will compound the left list when empty
         if len(nums1)==0 and len(nums2)==0:
             has_left = False
         if m == 0 and n and has_left:
             nums1 = nums2[:n] #put all on the left
-            # n = 0 # avoid the left
             has_left = False # avoid the left
         if len(nums1) < m and has_left:
             m = len(nums1)
@@ -33,7 +32,6 @@ class Solution:
         worth = False
         once = True
         
-
         if cond1 and cond2 and cond3 and \
             cond4 and cond5 and has_left:
             worth = True
