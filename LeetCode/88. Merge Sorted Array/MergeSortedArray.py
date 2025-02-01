@@ -3,6 +3,11 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
+        has_left = True
+        if m == 0 and n:
+            nums1 = nums2[:n] #put all on the left
+            # n = 0 # avoid the left
+            has_left = False # avoid the left
         if len(nums1) < m:
             m = len(nums1)
             nums1 = nums1[:m]
@@ -23,7 +28,6 @@ class Solution:
             cond5 = (-109 <= nums1[m-1]) and (nums2[n-1] <= 109)
         if (len(nums2)== 0):
             cond5 = False
-        print(f"M:{m} that: {len(nums1)} is {nums1}")
         worth = False
         once = True
         
@@ -32,8 +36,7 @@ class Solution:
             cond4 and cond5:
             worth = True
         
-        if worth and n and cond1:
-            print("here")
+        if worth and n and cond1 and has_left:
             max = m + n
             i = 0
             arr = []
