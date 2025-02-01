@@ -5,11 +5,11 @@ class Solution:
         """
         if not (len(nums1) == m + n):
             a = len(nums1)
-            print(f"num1 had: {len(nums1)}")
             while a < m + n:
                 nums1.append(nums1[a-1]*10)
                 a += 1
-            print(f"num1 got: {len(nums1)}")
+        if (not n) and (m < len(nums1)):
+            nums1 = nums1[:m]
         cond1 = len(nums1) == m + n
         cond2 = len(nums2) == n
         cond3 = 0 <= m and n <= 200
