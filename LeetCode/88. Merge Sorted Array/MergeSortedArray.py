@@ -3,6 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
+        if len(nums1) < m:
+            m = len(nums1)
+            nums1 = nums1[:m]
         if not (len(nums1) == m + n):
             a = len(nums1)
             while a < m + n:
@@ -20,6 +23,7 @@ class Solution:
             cond5 = (-109 <= nums1[m-1]) and (nums2[n-1] <= 109)
         if (len(nums2)== 0):
             cond5 = False
+        print(f"M:{m} that: {len(nums1)} is {nums1}")
         worth = False
         once = True
         
@@ -28,7 +32,8 @@ class Solution:
             cond4 and cond5:
             worth = True
         
-        if worth and n:
+        if worth and n and cond1:
+            print("here")
             max = m + n
             i = 0
             arr = []
