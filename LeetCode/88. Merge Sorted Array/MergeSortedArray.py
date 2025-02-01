@@ -29,7 +29,7 @@ class Solution:
             arr = []
             i1, i2 = 0, 0
             while (i < max):
-                if nums1[i1] < nums2[i2] or nums2[i2] == False:
+                if nums1[i1] < nums2[i2] or  (nums2[i2] is False):
                     arr.append(nums1[i1])
                     i1 += 1
                 else:
