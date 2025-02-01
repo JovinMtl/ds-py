@@ -4,6 +4,8 @@ class Solution:
         Do not return anything, modify nums1 in-place instead.
         """
         has_left = True # will compound the left list when empty
+        if (len(nums1) < m) and (len(nums2) < n):
+            has_left = False
         if len(nums1)==0 and len(nums2)==0:
             has_left = False
         if m == 0 and n and has_left:
