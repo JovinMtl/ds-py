@@ -19,9 +19,7 @@ class Solution:
             cond2 = True
             cond5 = (-109 <= nums1[m-1]) and (nums2[n-1] <= 109)
         if (len(nums2)== 0):
-            cond2 = True
             cond5 = False
-            print(f"but: N is {len(nums2)}")
         worth = False
         once = True
         
@@ -46,10 +44,9 @@ class Solution:
                     nums2.append(False)
                 i += 1
             nums1 = arr
-        elif not cond5:
-            print(f"Empty nums2")
         else:
-            print(f"Not worthy:{cond1}{cond2}{cond3}{cond4}{cond5}")
+            pass
+            # print(f"Not worthy:{cond1}{cond2}{cond3}{cond4}{cond5}")
         
         return nums1
     
