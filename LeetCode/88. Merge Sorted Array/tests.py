@@ -79,3 +79,11 @@ class TestMergeSortedArray(unittest.TestCase):
         n = 2
         result = self.obj.merge(nums1=nums1, nums2=nums2, m=m, n=n)
         self.assertEqual(result,[1, 5])
+    
+    def test_solution_ten(self):
+        nums1 = []
+        nums2 = []
+        m = 0
+        n = 0
+        result = self.obj.merge(nums1=nums1, nums2=nums2, m=m, n=n)
+        self.assertEqual(result,[])
