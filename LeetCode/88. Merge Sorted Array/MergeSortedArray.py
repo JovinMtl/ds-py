@@ -59,12 +59,6 @@ class Solution:
             # print(f"Not worthy:{cond1}{cond2}{cond3}{cond4}{cond5}")
         
         return nums1
-    
-    def _makePos(self, num)->int:
-        if num < 0:
-            return num * -1
-        else:
-            return num
 
 
 obj = Solution().merge([1,2,8,5,6],3, [0,1], 2)
