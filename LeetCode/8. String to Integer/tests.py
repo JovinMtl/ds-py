@@ -10,4 +10,4 @@ class TestStringtoInteger(unittest.TestCase):
     
     def test_one(self):
         s = "1"
-        self.assertEqual(self.obj.convert(s), 0)
+        self.assertEqual(self.obj.convert(s), 1)
