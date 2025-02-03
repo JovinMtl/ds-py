@@ -15,11 +15,12 @@ class StringtoInteger:
             if int(s[i]):
                 digits.append(int(s[i]))
             else:
-                i = len_int - 1
+                i = len_int - 2
+            i += 1
         len_digit = len(digits)
         result = 0
         for digit in digits:
-            result += digit * (10**len_digit)
+            result += digit * (10**(len_digit-1))
             len_digit -= 1
         if is_neg:
             result *= -1
