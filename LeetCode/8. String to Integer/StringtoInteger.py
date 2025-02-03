@@ -12,10 +12,12 @@ class StringtoInteger:
             i = 1
         digits = []
         while i < len_int:
-            if int(s[i]):
-                digits.append(int(s[i]))
+            try:
+                type(int(s[i]))
+            except ValueError:
+                break
             else:
-                i = len_int - 2
+                digits.append(int(s[i]))
             i += 1
         len_digit = len(digits)
         result = 0
