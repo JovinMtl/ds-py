@@ -7,6 +7,8 @@ class StringtoInteger:
             return 0
         if s[i] == ' ':
             s = self._removeSpace(s=s)
+        if len(s)==0:
+            return 0
         len_int = len(s)
         is_neg = False
         if s[i] == '-':
@@ -37,6 +39,8 @@ class StringtoInteger:
         return result
     
     def _removeSpace(self, s)->str:
+        if len(s)==0:
+            return ''
         if s[0] == ' ':
             s = s[1:]
             return self._removeSpace(s=s)
