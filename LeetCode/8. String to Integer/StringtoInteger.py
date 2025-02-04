@@ -26,6 +26,8 @@ class StringtoInteger:
         for digit in digits:
             result += digit * (10**(len_digit-1))
             len_digit -= 1
+        if result > (2**31):
+            result = 2**31
         if is_neg:
             result *= -1
         return result
@@ -36,3 +38,6 @@ class StringtoInteger:
             return self._removeSpace(s=s)
         
         return s
+
+
+# Round "-91283472332" ( -2**31) into  -2147483648
