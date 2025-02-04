@@ -3,6 +3,8 @@ class StringtoInteger:
     def convert(self, s)->int:
         """will do the job"""
         i = 0
+        if len(s)==0:
+            return 0
         if s[i] == ' ':
             s = self._removeSpace(s=s)
         len_int = len(s)
