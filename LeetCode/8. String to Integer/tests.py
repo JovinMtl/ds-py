@@ -15,3 +15,7 @@ class TestStringtoInteger(unittest.TestCase):
     def test_two_string_to_integer(self):
         s = "23530"
         self.assertEqual(self.obj.convert(s), 23530)
+
+    def test_three_string_to_integer(self):
+        s = "   -042"
+        self.assertEqual(self.obj.convert(s), -42)

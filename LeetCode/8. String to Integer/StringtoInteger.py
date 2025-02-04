@@ -2,18 +2,16 @@
 class StringtoInteger:
     def convert(self, s)->int:
         """will do the job"""
+        i = 0
+        if s[i] == ' ':
+            s = self._removeSpace(s=s)
         len_int = len(s)
         is_neg = False
-        i = 0
         if s[i] == '-':
             is_neg = True
             i = 1
         elif s[i] == '+':
             i = 1
-        elif s[i] == ' ':
-            print("It is space")
-            refined = self._removeSpace(s=s)
-            print(f"The refined: {refined}")
         digits = []
         while i < len_int:
             try:
@@ -33,7 +31,8 @@ class StringtoInteger:
         return result
     
     def _removeSpace(self, s)->str:
-        if s[0] != ' ':
+        if s[0] == ' ':
+            s = s[1:]
             return self._removeSpace(s=s)
-        s = s[1:]
+        
         return s
