@@ -32,7 +32,7 @@ class StringtoInteger:
             len_digit -= 1
         if is_neg:
             result *= -1
-        if result > (2**31):
+        if result >= (2**31):
             result = (2**31) - 1
         elif result < (-2**31):
             result = -(2**31)
