@@ -27,3 +27,7 @@ class TestStringtoInteger(unittest.TestCase):
     def test_five_string_to_integer(self):
         s = ""
         self.assertEqual(self.obj.convert(s), 0)
+
+    def test_six_string_to_integer(self):
+        s = "21474836460"
+        self.assertEqual(self.obj.convert(s), 2147483647)

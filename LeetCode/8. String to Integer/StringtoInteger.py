@@ -28,10 +28,12 @@ class StringtoInteger:
         for digit in digits:
             result += digit * (10**(len_digit-1))
             len_digit -= 1
-        if result > (2**31):
-            result = 2**31
         if is_neg:
             result *= -1
+        if result > (2**31):
+            result = (2**31) - 1
+        elif result < (-2**31):
+            result = -(2**31)
         return result
     
     def _removeSpace(self, s)->str:
