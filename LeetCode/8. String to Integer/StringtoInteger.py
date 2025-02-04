@@ -10,6 +10,10 @@ class StringtoInteger:
             i = 1
         elif s[i] == '+':
             i = 1
+        elif s[i] == ' ':
+            print("It is space")
+            refined = self._removeSpace(s=s)
+            print(f"The refined: {refined}")
         digits = []
         while i < len_int:
             try:
@@ -27,3 +31,9 @@ class StringtoInteger:
         if is_neg:
             result *= -1
         return result
+    
+    def _removeSpace(self, s)->str:
+        if s[0] != ' ':
+            return self._removeSpace(s=s)
+        s = s[1:]
+        return s
