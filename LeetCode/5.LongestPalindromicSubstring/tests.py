@@ -22,5 +22,10 @@ class Solution(unittest.TestCase):
         # First on backup took 58.083s
         # Second on backup took 0.740s
     
+    def test_longestPalindrome_three(self):
+        data = "babad"
+        result = self.obj.solution(data=data)
+        self.assertEqual(result, "bab")
+    
 
     
