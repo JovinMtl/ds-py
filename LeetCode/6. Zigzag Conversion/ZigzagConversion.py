@@ -5,6 +5,8 @@ class ZigzagConversion:
     def convert(self, data:str, numRows:int=1)->str:
         # print(f"The numRows: {numRows}")
         # start, end = time.time(), time.time()
+        if numRows == 1:
+            return data
         arr = []
         i = 0
         t = 0
