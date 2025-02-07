@@ -33,3 +33,9 @@ class ZigzagConversionTest(unittest.TestCase):
         data = "ABCDEF"
         result = self.obj.convert(data=data, numRows=1)
         self.assertEqual(result, "ABCDEF")
+
+    
+    def test_zigzag_six(self):
+        data = "AB"
+        result = self.obj.convert(data=data, numRows=2)
+        self.assertEqual(result, "AB")
