@@ -17,3 +17,8 @@ class Solution(unittest.TestCase):
         number = 121
         result = self.obj.check(data=number)
         self.assertEqual(result, True)
+    
+    def test_palindromeNumber_three(self):
+        number = 0
+        result = self.obj.check(data=number)
+        self.assertEqual(result, True)
