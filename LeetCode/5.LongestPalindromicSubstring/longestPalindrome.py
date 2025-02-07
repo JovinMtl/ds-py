@@ -1,50 +1,31 @@
 
-import time
 
 class LongestPalindromicSubstring:
 
     def solution(self, data):
-        start, end = time.time(), time.time()
         l_d = len(data)
         i = 1
-        solutions = []
-        if data == self._re(data):
-            solutions.append(data)
-            # return data
+        longest = ''
+        if data == data[::-1]:
+            if len(data) > len(longest):
+                longest = data
         while i < (l_d-1):
             m1 = data[i:] # taking the first caracter to match the rest
-            if self._re(m1) == m1:
-                solutions.append(m1)
-                # return m1
+            if m1 == m1[::-1]:
+                if len(m1) > len(longest):
+                    longest = m1
             j = 1
             while j <= (l_d-1): # the rest to match with, or m1 to be the next
                 m2 = data[:-j]
                 m3 = data[i:-j]
-                if self._re(m2) == m2 and \
-                    len(m2)>1:
-                    solutions.append(m2)
-                    # return m2
-                elif self._re(m3) == m3 and \
-                    len(m3)>1:
-                    solutions.append(m3)
-                    # return m3
+                if m2 == m2[::-1] and \
+                    len(m2)>1 and (len(m2) > len(longest)):
+                    longest = m2
+                elif m3 == m3[::-1] and \
+                    len(m3)>1 and len(m3)> len(longest):
+                    longest = m3
                 j += 1
             i += 1
-        solutions.append(data[0])
-        longest = ''
-        for solution in solutions:
-            if len(solution) > len(longest):
-                longest = solution
-        end = time.time()
-        print(f"We have {len(solutions)} solutions. took {end - start}")
+        if len(data[0]) > len(longest):
+            longest = data[0]
         return longest
-    
-    def _re(self, data):
-        # This method is for reversing the string
-        l_d = len(data) - 1
-        i = 0
-        result = ''
-        while l_d >= 0:
-            result += data[l_d]
-            l_d -= 1
-        return result
