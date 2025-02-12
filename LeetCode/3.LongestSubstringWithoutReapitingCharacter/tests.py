@@ -23,4 +23,4 @@ class Solution(unittest.TestCase):
         data = "bbbbb"
         result = self.obj.longString(s=data)
         self.assertEqual(result, 1)
-    
+        
