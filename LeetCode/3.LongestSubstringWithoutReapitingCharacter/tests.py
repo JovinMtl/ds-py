@@ -19,3 +19,8 @@ class Solution(unittest.TestCase):
         result = self.obj.longString(s=data)
         self.assertEqual(result, 3)
     
+    def test_longest_substring_three(self):
+        data = "bbbbb"
+        result = self.obj.longString(s=data)
+        self.assertEqual(result, 1)
+    
