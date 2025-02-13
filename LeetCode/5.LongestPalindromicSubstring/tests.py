@@ -1,7 +1,7 @@
 
 import unittest
 
-from longestPalindrome import LongestPalindromicSubstring
+from longestPalindrome2 import LongestPalindromicSubstring
 
 
 class Solution(unittest.TestCase):
