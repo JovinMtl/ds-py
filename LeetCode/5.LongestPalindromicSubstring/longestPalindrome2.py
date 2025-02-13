@@ -12,12 +12,12 @@ class LongestPalindromicSubstring:
         l_d = len(data)
         i = 1
         j = 1
-        longest = ''
+        longest = data[0]
         while i < (l_d-1):
             m1 = data[i:] # taking the first caracter to match the rest
             if m1 == m1[::-1] and len(m1) > len(longest):
                 longest = m1
-            m2 = data[i:-j]
+            m2 = data[(i-j):-j]
             if m2 == m2[::-1] and len(m2) > len(longest):
                 longest = m2
             if i == j:
@@ -25,10 +25,9 @@ class LongestPalindromicSubstring:
                 j = 1
             else:
                 j += 1
-        if len(data[0]) > len(longest):
-            longest = data[0]
         return longest
     
 # Ran 4 tests in 3.069s
 # Ran 4 tests in 0.356s
+# Ran 4 tests in 0.404s  successfully
 #  seems to have time complexity of O(n)
