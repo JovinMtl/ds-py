@@ -30,4 +30,4 @@ class LongestPalindromicSubstring:
 # Ran 4 tests in 3.069s
 # Ran 4 tests in 0.356s
 # Ran 4 tests in 0.404s  successfully
-#  seems to have time complexity of O(n)
+#  seems to have time complexity of O(n**2)

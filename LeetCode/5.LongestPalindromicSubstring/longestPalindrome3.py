@@ -7,27 +7,27 @@ class LongestPalindromicSubstring:
     """
 
     def solution(self, data):
-        if data == data[::-1]:
-            return data
-        l_d = len(data)
-        i = 1
-        j = 1
-        longest = data[0]
-        while i < (l_d-1):
-            m1 = data[i:] # taking the first caracter to match the rest
-            if m1 == m1[::-1] and len(m1) > len(longest):
-                longest = m1
-            m2 = data[(i-j):-j]
-            if m2 == m2[::-1] and len(m2) > len(longest):
-                longest = m2
-            if i == j:
-                i += 1
-                j = 1
-            else:
-                j += 1
-        return longest
+        t = '#'.join(f'^{data}$')
+        n = len(t)
+        P = [0] * n
+        C = R = 0
+
+        for i in range(2, n-2):
+            # Find the corresponding letter in the palindrome substring
+            mirr = 2*C - i
+            print(f'{mirr= }, {R= }, {i= }')
+            if R > i: P[i] = min(R - i, P[mirr])
+            
+            # Expand around i
+            while t[i + P[i] + 1] == t[i - P[i] - 1]: P[i] += 1
+            
+            # If palindrome centered at i expands past R, adjust center C and R
+            if i + P[i] > R: C, R = i, i + P[i]
+        
+        max_len, center_index = max((n, i) for i, n in enumerate(P))
+        print(P)
+        print(list(t))
+        start = (center_index - max_len) // 2
+        return data[start:start + max_len]
     
-# Ran 4 tests in 3.069s
-# Ran 4 tests in 0.356s
-# Ran 4 tests in 0.404s  successfully
-#  seems to have time complexity of O(n)
+# Ran 4 tests in 0.098s
