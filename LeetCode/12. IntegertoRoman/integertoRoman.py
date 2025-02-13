@@ -13,11 +13,9 @@ class IntegertoRoman:
             number -= (cinq_cent * 500)
             roman += "D"*cinq_cent
         cents = int(number / 100)
-        print(f"Number after cinq_cent:{number}")
         if cents:
             number -= (cents * 100)
             roman += "C"*cents
-        print(f"Number after cents: {number}")
         cinquante = int(number / 50)
         if cinquante:
             number -= (cinquante * 50)
