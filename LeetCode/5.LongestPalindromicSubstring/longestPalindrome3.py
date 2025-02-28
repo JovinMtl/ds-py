@@ -24,10 +24,14 @@ class LongestPalindromicSubstring:
             # If palindrome centered at i expands past R, adjust center C and R
             if i + P[i] > R: C, R = i, i + P[i]
         
+        print(f"THe P: {P}\nIts enumarate:{max((n, i) for i, n in enumerate(P))}\
+              \nfrom:{t}")
+
         max_len, center_index = max((n, i) for i, n in enumerate(P))
-        print(P)
-        print(list(t))
+        # print(P)
+        # print(list(t))
         start = (center_index - max_len) // 2
+        print(f"Result for:{data} = {data[start:start + max_len]}")
         return data[start:start + max_len]
     
 # Ran 4 tests in 0.098s
