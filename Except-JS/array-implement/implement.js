@@ -3,17 +3,27 @@
 
 class JoveArray {
     constructor(){
-        this.lenght = 0;
+        this.length = 0;
         this.data = {}
-        return this
+        // return this.data
+    }
+    see(index=-1){
+        if (index < 0){
+            console.log(this.data)
+        } else {
+            console.log(this.data[index])
+        }
+        
     }
     add(val){
-        this.data[this.lenght] = val
-        this.lenght++
+        this.data[this.length] = val
+        this.length++
     }
 }
 
 const myArray = new JoveArray()
-myArray.add(1)
-
-console.log("Look at this: " + myArray)
+myArray.add(5)
+// myArray.see()
+myArray.add('jove')
+myArray.see()
+// console.log("Look at this: " + myArray)
