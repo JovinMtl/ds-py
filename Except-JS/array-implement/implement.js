@@ -43,8 +43,9 @@ function reverseStr(str){
         // newArray.add(oldArray[i])
         nArray.push(oldArray[i])
     }
-    console.log(nArray)
+    let result = nArray.join('')
+    console.log(nArray, result)
 }
 
-const myStr = "Hello"
+const myStr = "Hello, this is jove"
 reverseStr(myStr)
