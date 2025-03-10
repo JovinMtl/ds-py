@@ -36,12 +36,12 @@ myArray.reverse()
 myArray.see()
 
 function reverseStr(str){
-    const oldArray = str.split('')
-    const newArray = new JoveArray()
+    // const oldArray = str.split('')
+    // const newArray = new JoveArray()
     const nArray = []
-    for (let i = oldArray.length - 1; i >= 0; i--){
+    for (let i = str.length - 1; i >= 0; i--){
         // newArray.add(oldArray[i])
-        nArray.push(oldArray[i])
+        nArray.push(str[i])
     }
     let result = nArray.join('')
     console.log(nArray, result)
