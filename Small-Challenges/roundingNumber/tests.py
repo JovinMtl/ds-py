@@ -26,3 +26,8 @@ class Test(unittest.TestCase):
         result = self.obj.round(val=data)
         self.assertEqual(result, 11000)
 
+    def test_longest_substring_four(self):
+        data = 21250
+        result = self.obj.round(val=data)
+        self.assertEqual(result, 22000)
+
