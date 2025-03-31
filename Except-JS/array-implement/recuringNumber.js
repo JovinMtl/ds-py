@@ -13,4 +13,4 @@ function recuringNumber(arr){
     }
     return result
 }
-console.log("The result is : ", recuringNumber([2, 5, 1, 2, 3, 5, 1, 2, 4]))
+console.log("The result is : ", recuringNumber([2, 5, 1, 0, 3, 5, 1, 2, 4]))

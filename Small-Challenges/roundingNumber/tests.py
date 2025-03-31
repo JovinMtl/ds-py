@@ -11,3 +11,8 @@ class Test(unittest.TestCase):
         result = self.obj.round(val=data)
         self.assertEqual(result, 800)
 
+    def test_longest_substring_two(self):
+        data = 1120
+        result = self.obj.round(val=data)
+        self.assertEqual(result, 1500)
+
