@@ -16,3 +16,8 @@ class Test(unittest.TestCase):
         result = self.obj.round(val=data)
         self.assertEqual(result, 1500)
 
+    def test_longest_substring_three(self):
+        data = 5220
+        result = self.obj.round(val=data)
+        self.assertEqual(result, 5500)
+
