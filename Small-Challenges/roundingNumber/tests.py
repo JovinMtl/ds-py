@@ -36,8 +36,13 @@ class Test(unittest.TestCase):
         result = self.obj.round(val=data)
         self.assertEqual(result, 300)
 
-    def test_longest_substring_five(self):
+    def test_longest_substring_six(self):
         data = 1720
+        result = self.obj.round(val=data)
+        self.assertEqual(result, 2000)
+
+    def test_longest_substring_seven(self):
+        data = 2000
         result = self.obj.round(val=data)
         self.assertEqual(result, 2000)
 
