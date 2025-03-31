@@ -31,3 +31,8 @@ class Test(unittest.TestCase):
         result = self.obj.round(val=data)
         self.assertEqual(result, 22000)
 
+    def test_longest_substring_five(self):
+        data = 260
+        result = self.obj.round(val=data)
+        self.assertEqual(result, 300)
+
