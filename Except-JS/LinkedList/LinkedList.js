@@ -1,28 +1,39 @@
 
+class Node{
+    constructor(value){
+        this.val = value ? value : undefined;
+        this.next = null
+    }
+}
 
 class LinkedList {
     constructor(firstNode){
-        this.head = {
-            val : firstNode,
-            next : null
-        };
+        let head = new Node(firstNode)
+        // this.head = {
+        //     val : firstNode,
+        //     next : null
+        // };
+        this.head = head
         this.tail = this.head;
         this.length = firstNode ? 1 : 0
     }
     append(nodeValue){
-        let last = {
-            val: nodeValue ? nodeValue : null,
-            next: null
-        }
+        let last = new Node(nodeValue)
+        // let last = {
+        //     val: nodeValue ? nodeValue : null,
+        //     next: null
+        // }
         this.tail.next = last;
         this.tail = last;
         this.length++;
     }
     prepend(nodeValue){
-        let first = {
-            val: nodeValue ? nodeValue : null,
-            next: this.head
-        }
+        let first = new Node(nodeValue)
+        first.next = this.head
+        // let first = {
+        //     val: nodeValue ? nodeValue : null,
+        //     next: this.head
+        // }
         this.head = first
         this.length++
     }
@@ -60,3 +71,4 @@ myLinkedList.remove(0)
 myLinkedList.pop()
 
 console.log("THe Lklst: " + JSON.stringify(myLinkedList))
+console.log("Has length of: " + myLinkedList.length)
