@@ -26,6 +26,7 @@ class BsT{
             if((val > currentNode.value)){
                 if (! currentNode.right){
                     currentNode.right = elm
+                    elm.parent = currentNode.value
                     shouldLoop = false
                 }else{
                     currentNode = currentNode.right
@@ -35,6 +36,7 @@ class BsT{
             } else if ((val < currentNode.value)){
                 if (! currentNode.left){
                     currentNode.left = elm
+                    elm.parent = currentNode.value
                     shouldLoop = false
                 }else{
                     currentNode = currentNode.left
